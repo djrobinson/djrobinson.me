@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
 const TitleAndDescription = ({data}) => {
     const title = data.site.siteMetadata.title
@@ -17,6 +17,8 @@ const TitleAndDescription = ({data}) => {
                 marginTop: 0,
                 opacity: 0.5
             }}>{description}</p>
+            <Link to="/">Home</Link>
+            <Link to="/tags">All Tags</Link>
         </div>
     )
 }

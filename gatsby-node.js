@@ -43,6 +43,18 @@ const createTagPages = (createPage, posts) => {
 
 exports.createPages = (({graphql, actions}) => {
     const { createPage } = actions
+    const blogIndexTemplate = path.resolve('src/templates/blogIndex.js')
+    const aboutPageTemplate = path.resolve('src/templates/aboutPage.js')
+
+    createPage({
+        path: '/blog',
+        component: blogIndexTemplate
+    })
+
+    createPage({
+        path: '/about',
+        component: aboutPageTemplate
+    })
 
     return new Promise((resolve, reject) => {
         const blogPostTemplate = path.resolve('src/templates/blogPost.js')
@@ -51,7 +63,7 @@ exports.createPages = (({graphql, actions}) => {
             graphql(
                 `
                 query {
-                    allMarkdownRemark ( 
+                    allMarkdownRemark(filter: { sourceInstanceName: { eq: "pages" } })( 
                         sort: {order: ASC, fields: [frontmatter___date]}    
                     ) {
                         edges {

@@ -6,4 +6,5 @@ tags: ['Blockchain', 'Cryptocurrency', 'Finance']
 excerpt: "Setting the boundaries for discussing innovations in the crypto-space"
 ---
 
-In theory and in practice. Over the last few years I have become obsessed over 
+I love inventions that happen by mistake.
+

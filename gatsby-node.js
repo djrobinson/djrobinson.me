@@ -63,7 +63,7 @@ exports.createPages = (({graphql, actions}) => {
             graphql(
                 `
                 query {
-                    allMarkdownRemark(filter: { sourceInstanceName: { eq: "pages" } })( 
+                    allMarkdownRemark( 
                         sort: {order: ASC, fields: [frontmatter___date]}    
                     ) {
                         edges {

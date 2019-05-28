@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Header from "../components/BlogHeader"
+import Header from "../components/Header"
 
 const blogIndexTemplate = ({data}) => {
     const { edges } = data.allMarkdownRemark
     console.log(edges)
     return (
         <div>
-            <Header />
+            <Header></Header>
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',

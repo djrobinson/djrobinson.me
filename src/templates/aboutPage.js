@@ -1,12 +1,12 @@
 import React from "react"
-import OtherHeader from '../components/OtherHeader'
+import Header from '../components/Header'
 import { Link } from 'gatsby'
 
 const aboutPageTemplate = () => {
 
     return (
         <div>
-            <OtherHeader></OtherHeader>
+            <Header></Header>
             <div>
                 <h1>About Page</h1>
             </div>

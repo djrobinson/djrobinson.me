@@ -1,11 +1,13 @@
 import React from "react"
 import { graphql, Link } from 'gatsby'
+import Header from "../components/Header"
 
 const SingleTagTemplate = ({data, pageContext}) => {
     console.log(pageContext)
     const { posts, tagName } = pageContext
     return (
         <div>
+            <Header></Header>
             <div>
                 Posts about {`${tagName}`}
             </div>

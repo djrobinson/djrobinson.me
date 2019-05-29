@@ -56,15 +56,16 @@ exports.createPages = (({graphql, actions}) => {
         component: aboutPageTemplate
     })
 
-    return new Promise((resolve, reject) => {
+    const blogsAndTags = new Promise((resolve, reject) => {
         const blogPostTemplate = path.resolve('src/templates/blogPost.js')
-
-        resolve(
+        const aboutPageTemplate = path.resolve('src/templates/aboutPage.js')
+        resolve (
             graphql(
                 `
                 query {
                     allMarkdownRemark( 
-                        sort: {order: ASC, fields: [frontmatter___date]}    
+                        sort: {order: ASC, fields: [frontmatter___date]},
+                        filter: {fileAbsolutePath: {regex: "/(posts)/"}} 
                     ) {
                         edges {
                             node {
@@ -99,4 +100,7 @@ exports.createPages = (({graphql, actions}) => {
             })
         )
     })
+
+
+    return blogsAndTags
 })

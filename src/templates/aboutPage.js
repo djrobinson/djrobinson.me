@@ -1,6 +1,6 @@
 import React from "react"
 import Header from '../components/Header'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 const aboutPageTemplate = ({data}) => {
     console.log("Data: ", data)

@@ -12,7 +12,6 @@ const createTagPages = (createPage, posts) => {
                 if (!postsByTag[tag]) {
                     postsByTag[tag] = []
                 }
-
                 postsByTag[tag].push(node)
             })
         }
@@ -58,7 +57,6 @@ exports.createPages = (({graphql, actions}) => {
 
     const blogsAndTags = new Promise((resolve, reject) => {
         const blogPostTemplate = path.resolve('src/templates/blogPost.js')
-        const aboutPageTemplate = path.resolve('src/templates/aboutPage.js')
         resolve (
             graphql(
                 `

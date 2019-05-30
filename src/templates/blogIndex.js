@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Header from "../components/Header"
 
 const blogIndexTemplate = ({data}) => {
-    const { edges } = data.allMarkdownRemark
+    const { edges } = data.allMdx
     console.log(edges)
     return (
         <div>
@@ -37,7 +37,8 @@ const blogIndexTemplate = ({data}) => {
 
 export const query = graphql`
     query HomepageQuery {
-        allMarkdownRemark (
+        allMdx (
+            filter: {fileAbsolutePath: {regex: "/(posts)/"}},
             sort: {order: DESC, fields: [frontmatter___date]}    
         ){
             edges {

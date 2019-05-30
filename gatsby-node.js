@@ -55,22 +55,21 @@ exports.createPages = (({graphql, actions}) => {
         component: aboutPageTemplate
     })
 
-    const blogsAndTags = new Promise((resolve, reject) => {
-        const blogPostTemplate = path.resolve('src/templates/blogPost.js')
+    const blogsAndTags = new Promise((resolve, reject) => {        
         resolve (
             graphql(
                 `
                 query {
-                    allMarkdownRemark( 
-                        sort: {order: ASC, fields: [frontmatter___date]},
+                    allMdx(
                         filter: {fileAbsolutePath: {regex: "/(posts)/"}} 
                     ) {
                         edges {
                             node {
+                                id
                                 frontmatter {
                                     path
-                                    title
                                     tags
+                                    title
                                 }
                             }
                         }
@@ -78,17 +77,20 @@ exports.createPages = (({graphql, actions}) => {
                 }
                 `
             ).then(result => {
-                const posts = result.data.allMarkdownRemark.edges
+                if (result.errors) {
+                    console.error(result.errors)
+                    reject(result.errors)
+                }
+                const posts = result.data.allMdx.edges
 
                 createTagPages(createPage, posts)
 
                 posts.forEach(({node}, i) => {
-                    const path = node.frontmatter.path
                     createPage({
-                        path,
-                        component: blogPostTemplate,
+                        path: node.frontmatter.path,
+                        component: path.resolve(`./src/components/BlogPost.js`),
                         context: {
-                            pathSlug: path,
+                            id: node.id,
                             prev: i === 0 ? null : posts[i - 1].node,
                             next: i === (posts.length - 1) ? null : posts[i + 1].node
                         }
@@ -98,7 +100,5 @@ exports.createPages = (({graphql, actions}) => {
             })
         )
     })
-
-
     return blogsAndTags
 })

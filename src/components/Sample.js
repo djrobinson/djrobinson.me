@@ -20,9 +20,9 @@ class Sample extends React.Component {
             var color = d3.scaleLinear()
                 .domain([0, 180, 360])
                 .range([
-                d3.hsl(-100, 0.75, 0.35),
-                d3.hsl(  80, 1.50, 0.80),
-                d3.hsl( 260, 0.75, 0.35)
+                    d3.hsl( 190, 1, 0.84),
+                    d3.hsl(190, 1, 0.90),
+                    d3.hsl(190, 1, 0.98),
                 ]);
             return function(i) {
                 return d3.rgb(color(i));
@@ -105,8 +105,8 @@ class Sample extends React.Component {
             <canvas
                 id="prims-canvas"
                 ref={this._setRef.bind(this)} 
-                width="960"
-                height="500">
+                width="1800"
+                height="900">
             </canvas>
           </div>
         )

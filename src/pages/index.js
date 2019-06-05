@@ -18,33 +18,41 @@ const HomePage = () => {
                 alignItems: 'center',
                 justifyContent: 'center'
             }}>
-                <div
+            <div
+                style={{
+                    marginLeft: "18%",
+                    marginBottom: "10%" 
+                }}
+            >
+                <h1
                     style={{
-                        marginLeft: "15%",
-                        marginBottom: "10%" 
+                        margin: 0,
+                        padding: 0
                     }}
-                >
-                    <h1
-                        style={{
-                            margin: 0,
-                            padding: 0
-                        }}
-                    >Danny</h1>
-                    <h1 style={{
-                            margin: 0,
-                            padding: 0
-                        }}>Robinson</h1>
-                </div>
-                <div style={{
-                    display: 'flex',
-                    height: '100vh',
-                    width: '100vw',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                    <Link to="/blog">Blog</Link>
-                    <Link to="/about">About</Link>
+                >Danny</h1>
+                <h1 style={{
+                        margin: 0,
+                        padding: 0
+                    }}>Robinson</h1>
+            </div>
+            <div style={{
+                display: 'flex',
+                height: '100vh',
+                width: '100vw',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+                <Link to="/blog">Blog</Link>
+                <Link to="/about">About</Link>
+            </div>
+                
+            </div>
+            <div className="row">
+                <div className="Grid">
+                    <div className="Grid-cell">aiojwgoijweoigjweiogj</div>
+                    <div className="Grid-cell">Sup yo</div>
+                    <div className="Grid-cell">Howdy punk</div>
                 </div>
             </div>
         </div>

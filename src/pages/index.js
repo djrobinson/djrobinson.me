@@ -10,49 +10,35 @@ const HomePage = () => {
                 <link href="https://fonts.googleapis.com/css?family=Alegreya+SC&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet" />
             </Helmet>
-            <div style={{
-                display: 'flex',
-                height: '100vh',
-                width: '100vw',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-            <div
-                style={{
-                    marginLeft: "18%",
-                    marginBottom: "10%" 
-                }}
-            >
-                <h1
-                    style={{
-                        margin: 0,
-                        padding: 0
-                    }}
-                >Danny</h1>
-                <h1 style={{
-                        margin: 0,
-                        padding: 0
-                    }}>Robinson</h1>
-            </div>
-            <div style={{
-                display: 'flex',
-                height: '100vh',
-                width: '100vw',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}>
-                <Link to="/blog">Blog</Link>
-                <Link to="/about">About</Link>
-            </div>
-                
+            <div className="row">
+                <div className="grid">
+                    <div className="grid-cell grid-4">
+                        hey
+                    </div>
+                    <div className="grid-cell grid-4">
+                        <h1>Danny<br/>Robinson</h1>
+                    </div>
+                    <div className="grid-cell grid-4">
+                        <Link to="/blog">Blog</Link>
+                        <Link to="/about">About</Link>
+                    </div>
+                </div>
             </div>
             <div className="row">
-                <div className="Grid">
-                    <div className="Grid-cell">aiojwgoijweoigjweiogj</div>
-                    <div className="Grid-cell">Sup yo</div>
-                    <div className="Grid-cell">Howdy punk</div>
+                <div className="grid">
+                    <div className="grid-cell grid-4">
+                        <h1>lorem ipsum     jfoijweij   wg
+                            egjwowijgiqjweg
+                                ewgjoiwejg
+                                    oijweiojwoiejg</h1>
+                    </div>
+                    <div className="grid-cell grid-4">
+                        <h1>Danny Robinson</h1>
+                    </div>
+                    <div className="grid-cell grid-4">
+                        <Link to="/blog">Blog</Link>
+                        <Link to="/about">About</Link>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,11 @@
 html {
     background-color: #f1f1f9;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
 }
 h1, h2 {
     font-family: 'Alegreya SC', serif;
@@ -14,27 +20,35 @@ h3, h4, h5, h6, p {
     font-family: 'Spectral', serif;
 }
 
-.row {
-    clear: both;
-    width: 100%;
+.red {
+    background: red;
 }
 
-.dashboard {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
+.green {
+    background: green;
+}
+
+.blue {
+    background: blue;
+}
+
+.orange {
+    background: orange;
+}
+
+.purple {
+    background: purple;
+}
+
+.clear-row {
+    clear: both;
     width: 100vw;
-    height: 100vh;
 }
 
 .grid {
     display: flex;
 }
 
-.grid-cell { 
-    flex: 1;
-}
 
 /* Alignment per row */
 .grid-top {
@@ -45,6 +59,22 @@ h3, h4, h5, h6, p {
 }
 .grid-center {
     align-items: center;
+}
+
+.center-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.center-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
 }
 
 /* Alignment per cell */
@@ -58,51 +88,327 @@ h3, h4, h5, h6, p {
     align-self: center;
 }
 
-/* Base classes for all media */
-.grid-fit > .grid-cell {
-    flex: 1;
-}
-.grid-12 > .grid-cell {
+.col-12 {
     flex: 0 0 100%;
 }
-.grid-6 > .grid-cell {
-    flex: 0 0 50%
+.col-11 {
+    flex: 0 0 91.66667%;
 }
-.grid-4 > .grid-cell {
-    flex: 0 0 33.3333%
+.col-10 {
+    flex: 0 0 83.33333%;
 }
-.grid-3 > .grid-cell {
-    flex: 0 0 25%
+.col-9 {
+    flex: 0 0 75%;
+}
+.col-8 {
+    flex: 0 0 66.66667%;
+}
+.col-7 {
+    flex: 0 0 58.33333%;
+}
+.col-6 {
+    flex: 0 0 50%;
+}
+.col-5 {
+    flex: 0 0 41.66667%;
+}
+.col-4 {
+    flex: 0 0 33.33333%;
+}
+.col-3 {
+    flex: 0 0 25%;
+}
+.col-2 {
+    flex: 0 0 16.66667%;
+}
+.col-1 {
+    flex: 0 0 8.33333%;
+}
+
+.row-12 {
+    height: 100%;
+}
+.row-11 {
+    height: 91.66667%;
+}
+.row-10 {
+    height: 83.33333%;
+}
+.row-9 {
+    height: 75%;
+}
+.row-8 {
+    height: 66.66667%;
+}
+.row-7 {
+    height: 58.33333%;
+}
+.row-6 {
+    height: 50%;
+}
+.row-5 {
+    height: 41.66667%;
+}
+.row-4 {
+    height: 33.33333%;
+}
+.row-3 {
+    height: 25%;
+}
+.row-2 {
+    height: 16.66667%;
+}
+.row-1 {
+    height: 8.33333%;
+}
+
+.full-col-12 {
+    position: relative;
+    flex: 0 0 100vw;;
+}
+.full-col-11 {
+    position: relative;
+    flex: 0 0 91.66667vw;
+}
+.full-col-10 {
+    position: relative;
+    flex: 0 0 83.33333vw;
+}
+.full-col-9 {
+    position: relative;
+    flex: 0 0 75vw;
+}
+.full-col-8 {
+    position: relative;
+    flex: 0 0 66.66667vw;
+}
+.full-col-7 {
+    position: relative;
+    flex: 0 0 58.33333vw;
+}
+.full-col-6 {
+    position: relative;
+    flex: 0 0 50vw;
+}
+.full-col-5 {
+    position: relative;
+    flex: 0 0 41.66667vw;
+}
+.full-col-4 {
+    position: relative;
+    flex: 0 0 33.33333vw;
+}
+.full-col-3 {
+    position: relative;
+    flex: 0 0 25vw;
+}
+.full-col-2 {
+    position: relative;
+    flex: 0 0 16.66667vw;
+}
+.full-col-1 {
+    position: relative;
+    flex: 0 0 8.33333vw;
+}
+
+.full-row-12 {
+    height: 100vh;
+}
+.full-row-11 {
+    position: relative;
+    height: 91.66667vh;
+}
+.full-row-10 {
+    position: relative;
+    height: 83.33333vh;
+}
+.full-row-9 {
+    position: relative;
+    height: 75vh;
+}
+.full-row-8 {
+    position: relative;
+    height: 66.66667vh;
+}
+.full-row-7 {
+    position: relative;
+    height: 58.33333vh;
+}
+.full-row-6 {
+    position: relative;
+    height: 50vh;
+}
+.full-row-5 {
+    position: relative;
+    height: 41.66667vh;
+}
+.full-row-4 {
+    position: relative;
+    height: 33.33333vh;
+}
+.full-row-3 {
+    position: relative;
+    height: 25vh;
+}
+.full-row-2 {
+    position: relative;
+    height: 16.66667vh;
+}
+.full-row-1 {
+    position: relative;
+    height: 8.33333vh;
 }
 
 /* to medium screens */
 @media (min-width: 24em) {
-    .sm-grid-full > .grid-cell {
+    .col-12 {
         flex: 0 0 100%;
     }
-    .sm-grid-1of2 > .grid-cell {
+    .col-11 {
+        flex: 0 0 91.66667%
+    }
+    .col-10 {
+        flex: 0 0 83.33333%
+    }
+    .col-9 {
+        flex: 0 0 75%
+    }
+    .col-8 {
+        flex: 0 0 66.66667%
+    }
+    .col-7 {
+        flex: 0 0 58.33333%
+    }
+    .col-6 {
         flex: 0 0 50%
     }
-    .sm-grid-1of3 > .grid-cell {
-        flex: 0 0 33.3333%
+    .col-5 {
+        flex: 0 0 41.66667%
     }
-    .sm-grid-1of4 > .grid-cell {
+    .col-4 {
+        flex: 0 0 33.33333%
+    }
+    .col-3 {
         flex: 0 0 25%
+    }
+    .col-2 {
+        flex: 0 0 16.66667%
+    }
+    .col-1 {
+        flex: 0 0 8.33333%
+    }
+    
+    .row-12 {
+        height: 100vh;
+    }
+    .row-11 {
+        height: 91.66667vh;
+    }
+    .row-10 {
+        height: 83.33333vh;
+    }
+    .row-9 {
+        height: 75vh;
+    }
+    .row-8 {
+        height: 66.66667vh;
+    }
+    .row-7 {
+        height: 58.33333vh;
+    }
+    .row-6 {
+        height: 50vh;
+    }
+    .row-5 {
+        height: 41.66667vh;
+    }
+    .row-4 {
+        height: 33.33333vh;
+    }
+    .row-3 {
+        height: 25vh;
+    }
+    .row-2 {
+        height: 16.66667vh;
+    }
+    .row-1 {
+        height: 8.33333vh;
     }
 }
   
 /* Large screens */
 @media (min-width: 48em) {
-    .lg-grid-12 > .grid-cell {
+    .col-12 {
         flex: 0 0 100%;
     }
-    .lg-grid-6 > .grid-cell {
+    .col-11 {
+        flex: 0 0 91.66667%
+    }
+    .col-10 {
+        flex: 0 0 83.33333%
+    }
+    .col-9 {
+        flex: 0 0 75%
+    }
+    .col-8 {
+        flex: 0 0 66.66667%
+    }
+    .col-7 {
+        flex: 0 0 58.33333%
+    }
+    .col-6 {
         flex: 0 0 50%
     }
-    .lg-grid-4 > .grid-cell {
-        flex: 0 0 33.3333%
+    .col-5 {
+        flex: 0 0 41.66667%
     }
-    .lg-grid-3 > .grid-cell {
+    .col-4 {
+        flex: 0 0 33.33333%
+    }
+    .col-3 {
         flex: 0 0 25%
+    }
+    .col-2 {
+        flex: 0 0 16.66667%
+    }
+    .col-1 {
+        flex: 0 0 8.33333%
+    }
+    
+    .row-12 {
+        height: 100vh;
+    }
+    .row-11 {
+        height: 91.66667vh;
+    }
+    .row-10 {
+        height: 83.33333vh;
+    }
+    .row-9 {
+        height: 75vh;
+    }
+    .row-8 {
+        height: 66.66667vh;
+    }
+    .row-7 {
+        height: 58.33333vh;
+    }
+    .row-6 {
+        height: 50vh;
+    }
+    .row-5 {
+        height: 41.66667vh;
+    }
+    .row-4 {
+        height: 33.33333vh;
+    }
+    .row-3 {
+        height: 25vh;
+    }
+    .row-2 {
+        height: 16.66667vh;
+    }
+    .row-1 {
+        height: 8.33333vh;
     }
 }

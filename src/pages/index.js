@@ -12,33 +12,26 @@ const HomePage = () => {
             </Helmet>
             <div className="row">
                 <div className="grid">
-                    <div className="grid-cell grid-4">
-                        hey
+                    <div className="grid-col full-col-3 full-row-10">
+                        <div className="row-6 col-12 blue">
+
+                        </div>
+                        <div className="row-4 col-12 green">
+                            
+                        </div>
+                        <div className="row-2 col-12 purple">
+                        </div>
+
                     </div>
-                    <div className="grid-cell grid-4">
+                    
+                    <div className="full-col-4 full-row-9 center-left red">
                         <h1>Danny<br/>Robinson</h1>
                     </div>
-                    <div className="grid-cell grid-4">
+                    <div className="full-col-4 full-row-4 orange center">
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
                     </div>
-                </div>
-            </div>
-            <div className="row">
-                <div className="grid">
-                    <div className="grid-cell grid-4">
-                        <h1>lorem ipsum     jfoijweij   wg
-                            egjwowijgiqjweg
-                                ewgjoiwejg
-                                    oijweiojwoiejg</h1>
-                    </div>
-                    <div className="grid-cell grid-4">
-                        <h1>Danny Robinson</h1>
-                    </div>
-                    <div className="grid-cell grid-4">
-                        <Link to="/blog">Blog</Link>
-                        <Link to="/about">About</Link>
-                    </div>
+                    
                 </div>
             </div>
         </div>

@@ -12,15 +12,17 @@ const HomePage = () => {
             </Helmet>
             <div className="row">
                 <div className="grid">
-                    <div className="grid-col full-col-3 full-row-10">
-                        <div className="row-6 col-12 blue">
+                    <div className="grid-col full-col-3 full-row-9">
+                        <div className="row-4 col-12 blue">
 
                         </div>
                         <div className="row-4 col-12 green">
                             
                         </div>
-                        <div className="row-2 col-12 purple">
+                        <div className="row-4 col-12 purple">
+                            
                         </div>
+
 
                     </div>
                     

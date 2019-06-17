@@ -10,13 +10,13 @@ const HomePage = () => {
                 <link href="https://fonts.googleapis.com/css?family=Alegreya+SC&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet" />
             </Helmet>
-            <div className="row">
+            <div className="clear-row">
                 <div className="grid">
-                    <div className="grid-col full-col-3 full-row-9">
-                        <div className="row-4 col-12 blue">
+                    <div className="grid-col full-col-3 full-row-2">
+                        <div className="row-4 col-6 blue">
 
                         </div>
-                        <div className="row-4 col-12 green">
+                        <div className="row-4 col-6 green">
                             
                         </div>
                         <div className="row-4 col-12 purple">
